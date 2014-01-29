@@ -33,7 +33,7 @@ address {
   display: block;
   height: 100%;
   opacity: 0;
-  transition: opacity 83ms linear;
+  /*transition: opacity 83ms linear;*/
 }
 
 #game-of-life .alive span {
