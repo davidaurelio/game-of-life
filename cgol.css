@@ -1,0 +1,94 @@
+html {
+  font: 1em/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin: 0 0 .6em;
+}
+
+address {
+  margin: 1.5em 0;
+}
+
+#game-of-life {
+  border: 2px solid silver;
+  border-collapse: collapse;
+  table-layout: fixed;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#game-of-life td {
+  border: 1px dotted silver;
+  cursor: pointer;
+  padding: 1px;
+  width: 19px;
+  height: 19px;
+}
+
+#game-of-life span {
+  background-color: black;
+  border-radius: 5px;
+  display: block;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 83ms linear;
+}
+
+#game-of-life .alive span {
+  opacity: 1;
+}
+
+fieldset {
+  border: none;
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+.button {
+  background: #ddd;
+  color: #333;
+  box-sizing: content-box;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: #bbb #999 #777;
+  border-radius: 8px;
+  display: inline-block;
+  font: inherit;
+  outline: none;
+  padding: 4px .5em;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.button:disabled {
+  color: #aaa;
+}
+
+.button:focus, .button:enabled:active,
+.toggle:focus + label, .toggle:active + label {
+  box-shadow: 0 0 5px 3px #aaa;
+}
+
+.button:enabled:active,
+.toggle:checked + label.button {
+  box-shadow: inset 0 0 2px #777;
+  border-width: 2px 1px 1px;
+  padding: 5px .5em 4px;
+  border-color: #777 #999 #777;
+}
+
+input.toggle {
+  position: absolute;
+  border: 0 none transparent;
+  width: 0;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type="range"] {
+  vertical-align: middle;
+}

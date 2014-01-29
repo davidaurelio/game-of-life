@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Conway’s Game of Life</title>
+  <link rel="stylesheet" href="cgol.min.css">
+</head>
+<body>
+  <h1>Conway’s Game of Life</h1>
+  <p>State is saved in the URL hash. Just copy the URL and send it around to show off your Pattern!</p>
+  <form id="controls">
+    <fieldset>
+      <button id="clear" class="button">Clear board</button>
+      <button id="randomize" class="button">Random seed</button>
+      <label>
+        Density:
+        <input type="range" id="density" min="0" max="1" step=".01" value=".2">
+        <output for="density"></output>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label>
+        Board size:
+        <input type="range" id="size" min="5" max="50" step="1" value="10">
+        <output for="size"></output>
+      </label>
+    </fieldset>
+    <fieldset>
+      <button name="step" class="button" id="step">Evolve one step</button>
+      <input class="toggle" type="checkbox" name="autoplay" id="autoplay"><label class="button" for="autoplay">Autoplay</label>
+      <label>
+        Speed:
+        <input type="range" id="autoplay-speed" min="50" max="1500" step="50" value="350">
+        <output for="autoplay-speed"></output>ms
+      </label>
+    </fieldset>
+  </form>
+  <table id="game-of-life"></table>
+  <address>© 2014 <a href="http://github.com/davidaurelio">David Aurelio</a>. <a href="LICENSE">MIT Licensed</a></address>
+  <script src="cgol.min.js"></script>
+</body>
+</html>
